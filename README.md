@@ -117,4 +117,5 @@ If you're having trouble with a specific site, you may need to customize the sel
 
 ## License
 
-MIT License
+Creative Commons Universal License
+N.B: This is for educational or informational use only, I will not be held liable for any inaapropriate use of this program
