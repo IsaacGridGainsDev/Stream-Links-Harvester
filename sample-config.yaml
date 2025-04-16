@@ -1,0 +1,22 @@
+# Sample configuration file for the IDM Link Harvester
+
+# Browser and request settings
+delay_between_requests: 5        # Delay between page loads in seconds
+max_requests_per_minute: 10      # Maximum pages per minute to avoid rate limiting
+timeout: 15                      # Timeout for waiting for download link in seconds
+
+# Output settings
+output_dir: "./out"              # Directory for output files
+idm_path: "C:/Program Files (x86)/Internet Download Manager/IDMan.exe"  # Path to IDM executable
+download_dir: "C:/Downloads"     # Directory where IDM should save downloads
+
+# Selector settings - customize for different sites if needed
+download_link_selector: "a.download-button, a[data-download], a.video-download, a[href*='download']"
+
+# XHR intercept patterns - URL patterns to watch for video manifests
+xhr_patterns:
+  - "*.m3u8*"      # HLS manifests
+  - "*.mpd*"       # DASH manifests
+  - "*video*"      # Common pattern in video URLs
+  - "*media*"      # Common pattern in media URLs
+  - "*stream*"     # Common pattern in streaming URLs
